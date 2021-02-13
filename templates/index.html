@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="{% static 'examdocket.css'%}">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body >
+        <header class="container">
+          <img src="{% static '/img/lasulogo.gif' %}" alt="" srcset="">
+          <br>
+          <h1>LAGOS STATE UNIVERSITY</h1>
+        </header>
+      <!-- <div >
+        
+        <form action="" method="post">
+          
+          <div class="cap2">
+            <h5 class="cap3">MATRIC NO:</h5>
+            <input type="text"  required>
+              <h5 class="cap4"> COURSE</h5>
+              <SELect >>
+                
+              </SELect>
+            </div>
+          </div> -->
+          <div class="main">
+            <h2>Lagos State University Student Exam Venue Checker Portal</h2>
+            <p class="main-cap">ENTER MATRIC NUMBER</p>
+          <table>
+           
+                 <form method="post" action="action" >
+                <tr class="cap2">
+                  <td>Matric No:</td>
+                  <td><input type="text" size="25" name = "matric_no" required=""></td>
+                </tr>
+                <tr class="cap2">
+                  <td width = "95">CBT COURSE </td>
+                  <td class="o-cap" width="215">
+                    <select class="drop">
+                      <OPtion>CHEM 101</OPtion>
+                      <OPtion>CSC 111</OPtion>
+                      <OPtion>MAT 101</OPtion>
+                    </select>
+                  </td>
+                </tr>
+                <button  type="submit" class="btn">Check</button>{% csrf_token %}
+                 </form>
+          </table>
+        </div>
+        <p style="color: brown;">{{message}}</p>
+        <p>{{name }}</p>
+        <p>{{ bat }}</p>
+        <p>{{mat}}</p>
+          <br>
+          <strong>IMPORTANT NOTICE TO ALL STUDENT</strong>
+      </div>
+      <div class="hero">
+          <div class="hero-cap">
+            <h3>1. WEARING OF NOSE MASK AND POSSESSION OF PERSONAL HAND SANITISER IS COMPULSORY</h3>
+            <h3>2. CONVERGENCE POINT FOR STUDENTS SITTING FOR CBT EXAMS AT LANGUAGE LAB IS CLASS AT THE GROUND FLOOR LANGUAGE LAB</h3>
+            <h3>3. CONVERGENCE POINT FOR STUDENTS SITTING FOR CBT EXAMS AT LASU CBT CENTER IS BUBA MARWA 
+            NEW AUDITORIUM (STUDENTS ARE NOT ALLOWED TO COME DIRECTLY TO THE CBT CENTER)</h3>
+          <h3>4. BAG AND HANDSET SDHOULD NOT BE BROUGHT INTO THE EXAMS PREMISES</h3>
+          </div>
+      </div>
+      <div class="footer">
+      <hr>
+    <p class="footer-cap1">copyright &copy 2021: Web Services Unit, </p>  
+    <p class="footer-cap2"> <a href="www.lasu.com.edu.ng">lagos state university</a>, P.M.B 01 LASU OJO, lagos state, Nigeria, West Africa.</p>
+     </div>
+</body>
+</html>
