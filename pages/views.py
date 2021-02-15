@@ -2,15 +2,17 @@ from django.shortcuts import render
 import pandas as pd
 def get_data(mat,df):
     i = 0
-    while i < len(df):
-        if str(mat) in str(df['mat_no']): 
+    
+    if str(mat) not in str(df['mat_no']): 
+        name = 'none'
+        bat = 'none'
+            
+    else:
+        while i < len(df):
             if str(df['mat_no'][i]) == str(mat):
                 name = df['names'][i]
                 bat = df['Batch'][i]
-        else:
-            name = 'none'
-            bat = 'none'
-        i = i+1    
+            i = i+1
     return name , bat
 df = pd.read_csv('/home/jay/Unfinished Projects/lasu/pages/Needed.csv')
 # Create your views here.
